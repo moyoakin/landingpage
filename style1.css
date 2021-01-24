@@ -1,0 +1,38 @@
+.gallery{
+    display: grid;
+    gap: 10px;
+}
+
+.gallery img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*
+media query for tablets 
+ */
+
+ @media screen and (min-width: 768px){
+     .gallery{
+      grid-template-columns: repeat(2,1fr);
+     }
+ }
+
+ /* media query for laptops and larger screens */
+
+@media screen and (min-width: 1024px){
+
+    .gallery{
+        grid-template-columns:  repeat(3, 1fr);
+        margin: 10px 15%;
+    }
+
+    .gallery img:nth-of-type(3){
+
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+
+    }
+}
+ 
